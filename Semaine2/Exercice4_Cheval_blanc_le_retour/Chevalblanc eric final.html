@@ -15,27 +15,40 @@
 
     while (proceed) {
 
+// on stocke les données dans des variables-> 1 seul endroit à modifier si modif
+
+      var question1= "De quelle couleur est le cheval blanc d'Henri IV ?";
+      var reponse1 = "blanc";
+
+      var question2 = "Combien y a t il de sept nains ?";
+      var reponse2 = "7";
+      var reponse2Text = "sept";
+
+      var messageSucces = "Bravo";
+      var messageErreur = "Erreur"
+
       // on affiche la 1ère question
-      var reponseQuestion1 = prompt("De quelle couleur est le cheval blanc d'Henri IV ?");
+      var reponseQuestion1 = prompt(question1);
 
       console.log('reponseQuestion1', reponseQuestion1); // on affiche la réponse à la question 1 dans la console
 
     // si la réponse donnée est "blanc ou BLANC ou blAnc"
-    if(reponseQuestion1.toLowerCase() == "blanc"){
-          alert('Bravo');
+    if(reponseQuestion1.toLowerCase() == reponse1){
+          alert(succes);
 
         //boucle pour 2ème question
 
         while (proceed) {
 
+
         // affichage de la 2nde question
-            var reponseQuestion2 = prompt('Combien y a t il de sept nains ?');
+            var reponseQuestion2 = prompt(question2);
 
             console.log('reponseQuestion2', reponseQuestion2); // on affiche la réponse à la question 1 dans la console
 
             // si la réponse données est 7 ou 07 ou 007 ou 7.0
-            if(reponseQuestion2 == parseInt ("7")){
-              alert('Bravo, tu as fini le jeu !!!');
+            if(reponseQuestion2 == parseInt (reponse2)){
+              alert(succes);
               proceed=false;
             }
 
@@ -43,21 +56,21 @@
             else if (isNaN(parseInt(reponseQuestion2))){
 
                 if (reponseQuestion2.toLowerCase() === "sept") {
-                  alert('Bravo, tu as fini le jeu !!!');
+                  alert(succes);
                   proceed=false;
                 }
                 else {
-                  alert('Erreur');
+                  alert(messageErreur);
                 }
             }
 
             else {
-                alert('Erreur');
+                alert(messageErreur);
             //On ne passe pas le proceed à false => la Boucle pour poser la 2ème question redémarre
             }
         }
     } else {
-        alert('Erreur');
+        alert(messageErreur);
         //On ne passe pas le proceed à false => la Boucle pour poser la 1ère question redémarre
       }
     }
