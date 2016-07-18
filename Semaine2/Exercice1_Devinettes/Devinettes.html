@@ -1,0 +1,58 @@
+<html>
+
+  <body>
+
+    <script>
+
+       proceed = true;
+
+       while(proceed) {
+
+         var couleur = prompt ("De quelle couleur est le cheval blanc d'Henri 4 ?");
+         couleur = couleur.toLowerCase ();
+
+            if (couleur === "blanc") {
+              console.log ("Trop fort le mec!");
+              proceed = false;
+            }
+
+            else {
+              console.log("Looooose");
+            }
+          }
+
+
+        proceed = true;
+
+        while (proceed) {
+
+          var nains = prompt("Combien y a t-il de 7 nains?");
+
+
+            if (isNaN(parseInt(nains))) {
+              if (nains.toLowerCase() === "sept") {
+                console.log("Youhou trop fort !!!");
+                proceed=false;
+              }
+              else {
+              console.log ("Essaye encore, ce n'est pas un nombre !!! ");
+              }
+            }
+
+            else if (nains == 7) {
+              console.log("Trop fort mon pote");
+              proceed=false;
+            }
+
+            else {
+              console.log ("Mauvaise réponse !!!");
+            }
+
+        }
+
+
+    </script>
+
+  </body>
+
+</html>

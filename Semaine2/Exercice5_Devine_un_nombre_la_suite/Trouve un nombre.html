@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Trouve un nombre...</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+/*Devine un nombre - la suite
+
+Ecrire un programme qui
+
+tire un nombre entier au sort ( entre 0 et 100 )
+le fait deviner à l’aide d’indices ‘Plus grand’, ‘plus petit’, ‘Beaucoup plus grand’, ‘Beaucoup plus petit’
+( “Beaucoup” si plus de 10 d’écart )
+permet de continuer de jouer jusqu’à ce qu’on devine.
+*/
+
+
+
+    //tire un nombre entier au sort (entre 0 et 100)
+    var nombreTireAuSort = (Math.floor(Math.random()*100+0));
+    console.log('nombreTireAuSort', nombreTireAuSort);
+    proceed=true;
+
+  while(proceed) {
+
+    //Pose question à utilisateur
+    var reponseQuestion1 = prompt ("Donne un nombre entre 0 et 100.")
+    console.log('reponseQuestion1', reponseQuestion1); // on affiche la réponse à la question 1 dans la console
+
+          // Si nombre donné est le bon
+          if (reponseQuestion1 == nombreTireAuSort){
+            alert ('Tu as trouvé !!! You are a winner!!!');
+            proceed=false;
+          }
+
+          // Si nombre donné est trop grand
+          else if (reponseQuestion1 > nombreTireAuSort) {
+
+            if (reponseQuestion1 > 100) {
+              alert ('Le nombre donné est supérieur à 100, recommence');
+            }
+
+             else if (reponseQuestion1 > (nombreTireAuSort+10)) {
+            alert ('Le nombre donné est beaucoup trop élévé (supérieur de 10 au moins), recommence.');
+            }
+
+            else {
+              alert ('Le nombre donné est trop élévé , recommence.');
+            }
+          }
+
+
+          // Si nombre donné est trop petit
+          else if (reponseQuestion1 < nombreTireAuSort){
+
+            if (reponseQuestion1 < 0){
+              alert ('Le nombre donné n est pas compris entre 0 et 100, recommence.');
+            }
+
+            else if (reponseQuestion1 < (nombreTireAuSort-10)){
+           alert ('Le nombre donné est beaucoup trop petit (inférieur de 10 au moins), recommence.');
+           }
+
+           else {
+             alert ('Le nombre donné est trop petit, recommence.');
+           }
+         }
+
+          else {
+            alert ('Erreur, ceci n est pas un nombre, recommence');
+          }
+    }
+
+
+</script>
+</body>
+</html>

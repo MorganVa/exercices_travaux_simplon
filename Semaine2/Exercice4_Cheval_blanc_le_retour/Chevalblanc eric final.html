@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>De quelle couleur...</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//boucle principale
+
+  var proceed = true;
+
+//boucle pour 1ère question
+
+    while (proceed) {
+
+      // on affiche la 1ère question
+      var reponseQuestion1 = prompt("De quelle couleur est le cheval blanc d'Henri IV ?");
+
+      console.log('reponseQuestion1', reponseQuestion1); // on affiche la réponse à la question 1 dans la console
+
+    // si la réponse donnée est "blanc ou BLANC ou blAnc"
+    if(reponseQuestion1.toLowerCase() == "blanc"){
+          alert('Bravo');
+
+        //boucle pour 2ème question
+
+        while (proceed) {
+
+        // affichage de la 2nde question
+            var reponseQuestion2 = prompt('Combien y a t il de sept nains ?');
+
+            console.log('reponseQuestion2', reponseQuestion2); // on affiche la réponse à la question 1 dans la console
+
+            // si la réponse données est 7 ou 07 ou 007 ou 7.0
+            if(reponseQuestion2 == parseInt ("7")){
+              alert('Bravo, tu as fini le jeu !!!');
+              proceed=false;
+            }
+
+            // Gérer les réponses textuelles, avec différentes casses...
+            else if (isNaN(parseInt(reponseQuestion2))){
+
+                if (reponseQuestion2.toLowerCase() === "sept") {
+                  alert('Bravo, tu as fini le jeu !!!');
+                  proceed=false;
+                }
+                else {
+                  alert('Erreur');
+                }
+            }
+
+            else {
+                alert('Erreur');
+            //On ne passe pas le proceed à false => la Boucle pour poser la 2ème question redémarre
+            }
+        }
+    } else {
+        alert('Erreur');
+        //On ne passe pas le proceed à false => la Boucle pour poser la 1ère question redémarre
+      }
+    }
+</script>
+
+
+</body>
+</html>

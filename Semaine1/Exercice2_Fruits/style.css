@@ -1,0 +1,83 @@
+#boite1 {
+  border: 4px outset yellow;
+  height : 900px;
+  width: 700px;
+  margin: auto;
+}
+
+#titre {
+  height : 100px;
+  width : 600px;
+  background-color: #F59F30;
+  color : white;
+  margin :auto;
+}
+
+h1 {
+  padding-top: 30px;
+  padding-left : 10px;
+}
+
+#image {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#phrase {
+  font-family: Arial;
+  margin-left:20px;
+  font-style: italic;
+  font-size: 20px;
+  }
+
+.police {
+  font-family: Arial;
+}
+
+table {
+  width : 500px;
+  margin: auto;
+  border : 2px solid black;
+  border-collapse: collapse; /* Les bordures collées */
+}
+
+thead {
+  background-color: #AAA6A2;
+}
+
+#entete {
+  background-color: #E8E1D8;
+  border: 1px solid black;
+}
+
+th{
+  width:400px;
+  height:50px;
+}
+
+td {
+  border-left: 2px dashed black;
+  border-bottom: 2px solid black;
+  width:400px;
+  height:100px;
+}
+
+.centre {
+  text-align: center;
+}
+
+#padding-left{
+  padding-left:20px;
+}
+
+#lien {
+  background-color: yellow;
+  height: 30px;
+  width: 150px;
+  text-align: center;
+  margin-top: 30px;
+  margin-right: 20px;
+  float: right;
+  padding-top: 10px;
+  font-weight: bold;
+}

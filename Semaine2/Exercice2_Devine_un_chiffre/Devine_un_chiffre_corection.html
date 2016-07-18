@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Devine un chiffre</title>
+    <script type="text/javascript">
+        // on tire un nombre au hasard
+        var hasard = Math.round(Math.random() * 10);
+        // on stocke la question dans un variable
+        var question = "Devine un chiffre...";
+        console.log('hasard', hasard);
+        // on affiche la devinette et on stocke la réponse
+        var reponse = prompt(question);
+        reponse = parseInt(reponse); // on convertit la réponse en nombre
+        // si la réponse convertie en nombre n'est pas égale au chiffre tiré au hasard
+        if( reponse != hasard ){
+            var indice = reponse > hasard ? '+ petit' : '+ grand'; // si le nombre donné est supérieur l'indice est "+ grand"
+            reponse = parseInt(prompt('Faux ! ' + indice + ' / ' + question)); // on donne ll'indice et on repose la question
+            if( reponse != hasard )
+                alert('Et non ! la réponse était : ' + hasard);
+            else
+                alert('bravo ! la réponse était : ' + hasard);
+        }
+        else // sinon on affiche 'bravo'
+            alert('bravo ! la réponse était : ' + hasard);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
