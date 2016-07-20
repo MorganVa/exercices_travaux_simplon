@@ -1,0 +1,11 @@
+ Calcul mental
+
+Le programme tire au hasard:
+
+- une opération ( + * - )
+
+- deux nombres entiers <= 10
+
+- Le programme demande le résultat de l’opération à l’utilisateur » ex : “combien font 4 * 7 ?”
+
+- Le programme valide ou invalide la réponse données » alerte “Bravo” ou repose la question “Faux ! Combien …”

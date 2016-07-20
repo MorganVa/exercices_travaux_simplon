@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+    <title> Calcul mental </title>
+  </head>
+
+  <body>
+  <script type="text/javascript">
+
+    //tire un nombre entier au sort (entre 0 et 2)
+    var nombreTireAuSort = (Math.floor(Math.random() *3));
+    console.log ("Nombre tire au sort", nombreTireAuSort);
+
+    var premierChiffreAuSOrt= (Math.floor(Math.random() *11));
+      console.log ("Premier chiffre tire au sort", premierChiffreAuSOrt);
+    var deuxiemeChiffreAuSort = (Math.floor(Math.random() *11));
+      console.log ("Deuxième chiffre tire au sort", deuxiemeChiffreAuSort);
+
+    var reponseComplete = false;
+
+    while (!reponseComplete){
+
+      //en fonction du nombre tiré au sort, défini un symbole mathematiques
+        switch (nombreTireAuSort) {
+          case 0:
+            var symboleMaths = "-"; var reponse=premierChiffreAuSOrt - deuxiemeChiffreAuSort;
+            console.log("réponse ", reponse);
+            break;
+
+          case 1 :
+            var symboleMaths = "+";
+            var reponse=premierChiffreAuSOrt + deuxiemeChiffreAuSort;
+            console.log("réponse ", reponse);
+            break;
+
+          case 2:
+            var symboleMaths = "*";
+            var reponse=premierChiffreAuSOrt * deuxiemeChiffreAuSort;
+            console.log("réponse ", reponse);
+            break;
+
+          default:
+            alert("erreur");
+          }
+
+      console.log ("symboleMaths", symboleMaths); //affiche symbole mathématiques tiré au sort
+
+      var demandeReponse = parseInt(prompt("Combien font "+ premierChiffreAuSOrt +" "+ symboleMaths+" "+deuxiemeChiffreAuSort + " ?"));
+
+      if (demandeReponse === reponse){
+          alert("Bravo");
+          reponseComplete = true;
+      }
+
+      else if (isNaN(demandeReponse)) {
+        alert("Erreur, ceci n'est pas un nombre");
+      }
+
+      else {
+        alert("Erreur");
+      }
+    }
+
+
+
+
+
+
+
+  </script>
+  </body>
+
+</html>
