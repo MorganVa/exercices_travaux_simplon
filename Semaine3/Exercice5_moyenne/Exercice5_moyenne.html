@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    var notes = 0;
+
+    for (i=1; i<=10; i++) {
+      var note = parseInt(prompt("Entrer la note n°" + i + (" (note entre 1 et 20)" )));
+      console.log ("note"+ i + "=" + note);
+
+      if (isNaN(note)) {
+        alert("Ceci n'est pas un nombre, recommencez");
+        i=i-1; // on repasse i au i d'avant pour que ca redemande sans passer au i suivant
+      }
+
+      else if (note>20) {
+        alert ("La note fournie est supérieure à 20, recommencez")
+        i=i-1; // on repasse i au i d'avant pour que ca redemande sans passer au i suivant
+      }
+
+      else {
+        notes += note; // on rajoute à la variable notes la valeur de note , addition
+        console.log(notes);
+      }
+    }
+
+    var moyenne = notes / 10
+    console.log(moyenne);
+    alert ("La moyenne est de " + moyenne);
+
+    </script>
+  </body>
+</html>
