@@ -1,0 +1,225 @@
+@font-face{
+    font-family:Airglyphs;
+    src:url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/airglyphs-300e58e582c108dce795f3a3156e5b8c.eot");
+    src:url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/airglyphs-ie8-095785bf4e6fb87d882c113ef86beb83.eot?#") format("eot"),
+    url("https://a2.muscache.com/airbnb/static/airbnb-o2/fonts/airglyphs-54181e7c7f91745dfefac44cc5d704e1.woff") format("woff"),
+    url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/airglyphs-5f5be2154bdf6ba86a13824dba3252c6.ttf") format("truetype"),
+    url("https://a2.muscache.com/airbnb/static/airbnb-o2/fonts/airglyphs-e66bf14a81cf080cff79f69df47f6053.svg") format("svg");
+    font-weight:normal;
+    font-style:normal
+}
+@font-face{
+    font-family:Circular;
+    src:url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-22799398756cc42454a77735013a3378.eot");
+    src:url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-22799398756cc42454a77735013a3378.eot?#") format("eot"),
+    url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-030dcebde359eb3be354ab21c34a89ce.woff") format("woff"),
+    url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-287e910a06039c130e488343a7564c39.svg") format("svg");
+    font-weight:normal;
+    font-style:normal
+}
+@font-face{
+    font-family:Circular;
+    src:url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-35e1cf57d93dc4eb3db11cc2448cb91f.eot");
+    src:url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-35e1cf57d93dc4eb3db11cc2448cb91f.eot?#") format("eot"),
+    url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-1db902f5b85bbb0964e2994434edbe16.woff") format("woff"),
+    url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-0d9eb203b260869dc2470ae35162fc1e.svg") format("svg");
+    font-weight:normal;
+    font-style:italic
+}
+@font-face{
+    font-family:Circular;
+    src:url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-d74b6eea213711f97770fccaf37a7644.eot");
+    src:url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-d74b6eea213711f97770fccaf37a7644.eot?#") format("eot"),
+    url("https://a2.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-ba3e389678777af817295255589ca6f5.woff") format("woff"),
+    url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-3831f8bc07e9e70a9b42b4be3ea1a32c.svg") format("svg");
+    font-weight:700;
+    font-style:normal
+}
+@font-face{
+    font-family:Circular;
+    src:url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-8a3ba8037e29f0cf239dd80221c8fcbd.eot");
+    src:url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-8a3ba8037e29f0cf239dd80221c8fcbd.eot?#") format("eot"),
+    url("https://a2.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-6c6387f8d64ca549bfd6ce64f3e1ea1e.woff") format("woff"),
+    url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-a620f5ba0b473c36cdfce66bf4edf456.svg") format("svg");
+    font-weight:200;
+    font-style:normal
+}
+
+body {
+  font-family: "circular";
+  color : #FFF;
+  font-size: 14px;
+  background-color: #edefed;
+  margin: 0;
+}
+
+/* header {
+  position: relative;
+} */
+
+#video {
+position: absolute;
+top: 0;
+left: 0;
+right:0;
+}
+
+
+#logo img {
+  height: auto;
+  width: 100px;
+  position: absolute;
+  top:15px;
+  left:20px;
+}
+
+nav {
+  position: absolute;
+  top:5px;
+  right:20px;
+}
+
+nav li  {
+  display: inline-block;
+  padding-left: 30px;
+}
+
+button {
+  border: 2px solid #FFF;
+  padding : 7px 15px;
+  color:#FFF;
+  background: none;
+}
+
+button:hover {
+  background-color: #655E5E;
+  opacity: 0.9;
+}
+
+
+#texte {
+  text-align: center;
+  font-weight: bold;
+  position:relative;
+  top :150px;
+}
+
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  margin:0;
+  padding-bottom: 15px;
+}
+
+h3 {
+  font-size: 16px;
+  margin:0;
+}
+
+
+#menuBas {
+  position: relative;
+  background-color: black;
+  background: rgba(0, 0, 0, 0.5);
+  height: 104px;
+  top:463px;
+  left:0;
+}
+
+form {
+  position: absolute;
+  width: auto;
+  top:35px;
+  left:130px;
+}
+
+header input, header select {
+ padding:10px 20px 10px 10px;
+ display: block;
+ float: left;
+ background-color: #FFF;
+ opacity: 1;
+ font-size: 16px;
+}
+
+#destination {
+  width : 400px;
+}
+
+#dateArrivee {
+  width:75px;
+}
+
+#dateDepart {
+  width:75px;
+}
+
+#voyageurs {
+  width: 150px;
+}
+
+#recherche {
+  background-color: #ff5a5f;
+  color:#FFF;
+  font-weight: bold;
+  border-color: #ff5a5f;
+  width:150px;
+  text-align: center;
+  }
+
+#recherche:hover {
+  background-color: #FF7E82;
+  border-color: #FF7E82;
+}
+
+#bloc1 {
+  position: relative;
+  background-color: #FFF;
+  top: 520px;
+  display: block;
+  width:85%;
+  height: auto;
+  left:8%;
+}
+
+#bloc1 img {
+  vertical-align: bottom;
+}
+
+#blocTexte {
+position: absolute;
+left:690px;
+right:50px;
+top:30px;
+
+}
+
+#texte1, #texte2{
+  color: #484848;
+
+}
+
+#texte1 {
+  font-size:26px;
+  font-weight: bold;
+}
+
+#texte2 {
+  font-size: 16px;
+}
+
+#bloc1 button{
+  background-color: #007a87;
+  font-weight: bold;
+  position:absolute;
+  left:690px;
+  top:250px;
+  font-size: 16px;
+  width: 300px;
+  height:50px;
+  padding: 40px, 0px, 40px, 0px;
+}
+
+#bloc1 button:hover {
+  background-color: #009AAB;
+}

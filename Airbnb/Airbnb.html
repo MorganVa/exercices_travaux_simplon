@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Locations saisonnières, maisons, appartements et chambres d'hôtes à louer - Airbnb</title>
+
+    <link rel="icon" href="https://a1.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico" />
+
+    <!--chargement du css du calendrier-->
+                <link rel="stylesheet" media="screen" type="text/css" title="Design" href="calendrier.css" />
+
+    <!--chargement des ressources JS du calendrier-->
+                <script type="text/javascript" src="calendrier.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+
+    <div id="video">
+      <video width="100%" height="auto" autoplay="true" src="video.mp4">Vidéo d'accueil</video>
+    </div>
+
+    <header>
+
+<!--Logo Airbnb-->
+      <div id="logo">
+        <img src="logo.png">
+      </div>
+<!--Barre haut droite -->
+      <nav>
+        <ul>
+          <li> <button> Devenez hôte </button></li>
+          <li>Aide</li>
+          <li>Inscription</li>
+          <li>Connexion</li>
+        </ul>
+      </nav>
+<!-- Texte du milieu-->
+      <section id="texte">
+        <h1> Vivez là-bas </h1>
+        <h3> Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas,
+          comme chez vous. </h3>
+      </section>
+
+      <div id="menuBas" >
+<!-- menu déroulant du bas -->
+        <form class="menu" >
+           <input type="text"id="destination" name="Destination" placeholder="Où ? "/>
+           <input class="calendrier" id="dateArrivee" placeholder="Arrivée" type="text" >
+           <input class="calendrier" id="dateDepart" placeholder="Départ"  type="text" >
+           <!--<input type="number" id="voyageurs" name="nombreVoyageurs" placeholder="Voyageur(s)">-->
+           <select id="voyageurs">
+                <option value="deroulant" selected>1 voyageur</option>
+                <option value="deroulant">2 voyageurs</option>
+                <option value="deroulant">3 voyageurs</option>
+                <option value="deroulant">4 voyageurs</option>
+                <option value="deroulant">5 voyageurs</option>
+                <option value="deroulant">6 voyageurs</option>
+                <option value="deroulant">7 voyageurs</option>
+                <option value="deroulant">8 voyageurs</option>
+                <option value="deroulant">9 voyageurs</option>
+                <option value="deroulant">10 voyageurs</option>
+                <option value="deroulant">11 voyageurs</option>
+                <option value="deroulant">12 voyageurs</option>
+                <option value="deroulant">13 voyageurs</option>
+                <option value="deroulant">14 voyageurs</option>
+                <option value="deroulant">15 voyageurs</option>
+                <option value="deroulant">16+ voyageurs</option>
+          </select>
+           <input id="recherche" type="submit" name="rechercher" value="Rechercher">
+        </form>
+      </div>
+    </header>
+
+    <!--2eme bloc-->
+
+    <div id="bloc1">
+      <img src="Touristes.jpg">
+      <div id="blocTexte">
+        <p id="texte1"> Ouvrez la porte à un voyageur et à une nouvelle vie </p>
+        <p id="texte2"> Gagnez de l'argent en accueillant des voyageurs.</p>
+      </div>
+      <button name="bouton"> Estimer mes revenus </button>
+    </div>
+
+
+  </body>
+</html>
