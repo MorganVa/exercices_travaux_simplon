@@ -130,7 +130,7 @@ form {
   position: absolute;
   width: auto;
   top:35px;
-  left:130px;
+  left:100px;
 }
 
 header input, header select {
@@ -143,15 +143,24 @@ header input, header select {
 }
 
 #destination {
-  width : 400px;
+  width : 350px;
 }
 
 #dateArrivee {
-  width:75px;
+  width:100px;
+  padding-right: 50px;
 }
 
 #dateDepart {
-  width:75px;
+  width:100px;
+  padding-left: 45px;
+}
+
+form img {
+  position: absolute;
+    height:40px;
+    top:1px;
+    left:48%;
 }
 
 #voyageurs {
