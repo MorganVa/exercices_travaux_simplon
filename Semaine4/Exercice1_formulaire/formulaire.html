@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title> Formulaire </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <div id=nav>
+      <img src="logo2.jpg">
+      <p> In Code We Trust </p>
+      <ul>
+        <li> Accueil</li>
+        <li> Nos formations </li>
+        <li> Nous contacter </li>
+        <li> Connexion </li>
+      </ul>
+    </div>
+
+
+      <form id="identification">
+        <fieldset>
+          <legend> Connexion espace personnel </legend>
+            <ul>
+              <li>
+                <label for=identifiant> Identifiant </label>
+                <input id=identifiant name=name type=text placeholder="Saisir votre identifiant" required autofocus>
+              </li>
+              <li>
+                <label for=pass> Mot de passe </label>
+                <input id=pass name=name type=password placeholder="Saisir votre mot de passe" required autofocus>
+                <label for=memories> Mémoriser le mot de passe </label>
+                <input id=memories name=MDPmemoire type=checkbox>
+              </li>
+            </ul>
+
+            <div id="button">
+              <button type=submit> Valider </button>
+              <button type=button> Mot de passe perdu ? </button>
+            </div>
+        </fieldset>
+      </form>
+  </body>
+</html>
