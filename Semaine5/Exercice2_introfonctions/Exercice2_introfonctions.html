@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mini kata fonctions</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+
+
+
+// la fonction reçoit un caractère en paramètre et doit renvoyer true si le texte contient une voyelle, false sinon
+var voyelles = "aeiouy";
+
+function estUneVoyelle(lettre){
+      if (voyelles.indexOf(lettre)!=-1){
+      return true;
+    } else {
+      return false;
+    }
+}
+console.log("estUneVoyelle('f') :", estUneVoyelle('f') ); // false
+console.log("estUneVoyelle('a') :", estUneVoyelle('a') ); // true
+console.log("estUneVoyelle() :", estUneVoyelle())
+
+
+// la fonction reçoit un texte en paramètre et doit renvoyer true ou false
+var voyelles = "aeiouy";
+
+function contientUneVoyelle( texte ){
+    for(var i = 0; i < texte.length ; i++){
+        if(voyelles.indexOf(texte[i])!=-1){
+            return true;
+        }
+    }
+    return false;
+}
+console.log ("contientUneVoyelle ('salut') :",contientUneVoyelle("salut") ); //renvoie true
+console.log ("contientUneVoyelle ('brrr') :",contientUneVoyelle("brrr") ); // renvoie false
+
+// la fonction reçoit un texte en paramètre et doit renvoyer le nombre de voyelles
+var voyelles = "aeiouy";
+
+function compteVoyelle( texte ){
+    var compteur = 0;
+      for(var i = 0; i < texte.length ; i++){
+        if(voyelles.indexOf(texte[i])!=-1){
+            compteur++;
+          }
+        }
+    return compteur;
+}
+console.log ("compteVoyelle : 'brrrr'", compteVoyelle("brrrr")); // retourne 0
+console.log ("compteVoyelle : 'oui'", compteVoyelle("oui")); // retourne 3
+
+
+// la fonction reçoit un texte en paramètre et doit renvoyer ce texte sans ses voyelles
+var voyelles = "aeiouy";
+var lettreRemplacee = "";
+var texteRemplace = "";
+
+function enleveVoyelle( texteAModifier ){
+  for(var i = 0; i < texteAModifier.length ; i++){ // parcours les lettres du texte à modifier
+      for (var j = 0; j< voyelles.length; j++) { // parcours les lettres de voyelles
+        if(texteAModifier[i] == voyelles[j]){ // si la lettre du texte est une voyelle
+            lettreRemplacee = ""; // on remplace la lettre par rien
+            break;
+        } else {
+            lettreRemplacee = texteAModifier[i];  // sinon, on garde la lettre (la consonne)
+        }
+      }
+    texteRemplace += lettreRemplacee; // on ajoute les lettres remplacées (par rien ou par lettre d'origine)
+  }
+  return texteRemplace; // on retourne le resultat
+}
+
+var resultat = enleveVoyelle("Coucou"); // doit renvoyer Cc
+
+console.log('resultat :', resultat);
+
+</script>
+
+  </body>
+</html>

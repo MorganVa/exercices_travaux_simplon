@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Minikata Tableau</title>
+  </head>
+  <body>
+      <script type="text/javascript">
+
+  // TODO : ajouter une majuscule
+
+  var prenom = "paul";
+
+  var majuscule = prenom.replace(prenom.charAt(0),prenom.charAt(0).toUpperCase()); // on remplace la 1ère lettre par 1ère lettre en MAJ
+
+  console.log('prenom avec premiere lettre en majuscule', majuscule ); //Paul
+
+  --------------------------------------
+  // TODO : ajouter une majuscule à tous les prenoms de la liste
+
+  var users = ["joe", "lea", "bob", "ann"];
+     var usersMaj;
+
+     for (i=0 ; i < users.length; i++){
+        users[i] = users[i].replace(users[i].charAt(0),users[i].charAt(0).toUpperCase());
+        usersMaj = users.join();
+     };
+
+       console.log('Prenoms avec premiere lettre en majuscule', usersMaj ); //Joe, Lea, Bob, Ann
+  --------------------------------------
+  var users = ["joe", "lea", "bob", "ann"];
+  var voyelles = "aeiouy";
+  var prenomsVoyelle =[];
+  var prenomsVoyelleFinal;
+  var prenomsConsonne=[];
+  var prenomsConsonneFinal;
+
+
+  for (i=0 ; i < users.length; i++){
+    if (voyelles.indexOf(users[i].charAt(0))!=-1){
+        prenomsVoyelle.push(users[i]);
+        prenomsVoyelleFinal = prenomsVoyelle.join();
+
+        } else {
+        prenomsConsonne.push(users[i]);
+        prenomsConsonneFinal = prenomsConsonne.join();
+        }
+  };
+
+console.log (prenomsVoyelleFinal); // affiche liste des prenoms qui commencent par une voyelle
+console.log (prenomsConsonneFinal); //affiche liste des prenoms qui commencent par une consonne
+
+
+AVEC FONCTION :
+
+var users = ["joe", "lea", "bob", "ann"];
+ var voyelles = "aeiouy";
+
+
+    function voyellesEtConsonnes(prenoms){
+      var prenomsVoyelle =[];
+      var prenomsConsonne=[];
+
+
+      for (i=0 ; i < prenoms.length; i++){
+        if (voyelles.indexOf(prenoms[i].charAt(0))!=-1){
+            prenomsVoyelle.push(prenoms[i]);
+            var prenomsVoyelleFinal = prenomsVoyelle.join();
+        } else {
+            prenomsConsonne.push(prenoms[i]);
+            var prenomsConsonneFinal = prenomsConsonne.join();
+        }
+      }
+      var objetVoyellesEtConsonnes = {
+        PrenomsCommencantParVoyelle: prenomsVoyelleFinal,
+        PrenomsCommencantParConsonne: prenomsConsonneFinal}
+      return objetVoyellesEtConsonnes;
+
+    }
+
+    var resultat = voyellesEtConsonnes(users);
+    console.log ("Resultat :", resultat)
+
+  --------------------------------------
+
+  var notes = [10, 12, 13, 4, 8];
+
+  // TODO : calcul de la somme
+
+       var somme = 0;
+       for (i=0; i<notes.length; i++) {
+         somme+=notes[i];
+       }
+
+     console.log('somme des notes',somme);
+
+--------------------------------------
+
+// TODO : calcul de la moyenne
+
+var somme = 0;
+    for (i=0; i<notes.length; i++) {
+      somme+=notes[i];
+    }
+    var moyenne = somme/notes.length
+
+    console.log('moyenne', moyenne);
+
+--------------------------------------
+
+var nouvelleNote = 12;
+
+ // TODO : ajouter la note à liste
+notes.push(nouvelleNote);
+console.log(notes); // affiche [10, 12, 13, 4, 8, 12]
+
+--------------------------------------
+
+  // TODO : calcul de la nouvelle somme
+  var somme = 0;
+  for (i=0; i<notes.length; i++) {
+    somme+=notes[i];
+  }
+
+ console.log('somme des notes',somme);
+
+--------------------------------------
+
+  // TODO : calcul de la nouvelle moyenne
+  var somme = 0;
+      for (i=0; i<notes.length; i++) {
+        somme+=notes[i];
+      }
+      var moyenne = somme/notes.length
+
+      console.log('moyenne', moyenne);
+
+--------------------------------------
+
+  function compare(x, y) {
+    return x - y;
+  }
+
+  // TODO : trouvez la note la plus haute
+
+    var triTableau = notes.sort(compare); // sors le tableau par ordre croissant
+    var NoteHaute = triTableau[(notes.length)-1] ; // prend le dernier indice du tableau (note la plus haute)
+    console.log('meilleure note', NoteHaute);
+
+  // TODO : trouvez la note la plus mauvaise
+
+    var NoteBasse = triTableau[0] ; // prend le premier indicde du tableau trié (plus mauvaise note)
+    console.log('plus mauvaise note', NoteBasse);
+
+--------------------------------------
+
+      // TODO : passage en fonctions
+
+      function calculSomme( tableauDeNotes ) {
+        var somme = 0;
+
+        for (i=0; i<nombres.length; i++) {
+          somme+=nombres[i]; // ajoute à variable note les notes 1 par 1
+        }
+        return somme;
+      }
+
+      var resultatSomme = additionne(notes);
+
+      console.log('somme des notes',resultatSomme);
+
+
+        function calculMoyenne( tableauDeNotes ) {
+         var somme = 0;
+           for (i=0; i<nombres.length; i++) {
+             somme+=nombres[i];
+           }
+         var moyenne = somme/nombres.length
+         return moyenne;
+        }
+
+        var resultatMoyenne = moyenne(notes);
+        console.log('moyenne', resultatMoyenne);
+
+
+      </script>
+  </body>
+</html>
