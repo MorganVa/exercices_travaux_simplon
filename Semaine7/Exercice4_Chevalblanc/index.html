@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>De quelle couleur...</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js">  </script>
+</head>
+
+<body>
+
+  <div id="compteur">
+  </div>
+
+    <fieldset id="bloc1">
+         <legend>Question 1</legend>
+
+        <p id="question1">
+          De quelle couleur est le cheval blanc d'Henri IV ?
+        </p>
+
+        <p>
+             <label for="reponseQUestion1">Réponse :</label>
+             <input id="reponseQUestion1" type="text" onclick="reset(this)">
+
+      </p>
+      <button type="button" onclick="reponseUtilisateur1()">valider</button>
+
+    </fieldset>
+
+    <div id="loose">
+      <p id="perdu">
+      Vous avez perdu !
+      </p>
+
+    <fieldset id="bloc2">
+          <legend>Question 2</legend>
+
+        <p id="question2">
+          Combien y a t il de 7 nains ?
+        </p>
+
+        <p>
+             <label for="reponseQUestion2">Réponse :</label>
+             <input id="reponseQUestion2" type="text" onclick="reset(this)" >
+        </p>
+      <button type="button" onclick="reponseUtilisateur2()">valider</button>
+
+    </fieldset>
+
+    <div id="fin">
+      <p id="bravo">
+      Vous avez gagné !
+      </p>
+    </div>
+
+    <div id="loose2">
+      <p id="perdu2">
+      Vous avez perdu !
+      </p>
+  </div>
+
+</body>
+</html>

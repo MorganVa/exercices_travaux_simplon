@@ -1,0 +1,70 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Calculatrice</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="global">
+
+    <div id="ecran">
+    </div>
+
+   <div id="texte">
+     <div>
+      <table id="chiffres">
+        <tr>
+          <td id="7"  onclick="chiffre(this)">7</td>
+          <td id="8"  onclick="chiffre(this)">8</td>
+          <td id="9"  onclick="chiffre(this)">9</td>
+        </tr>
+        <tr>
+          <td id="4"  onclick="chiffre(this)">4</td>
+          <td id="5"  onclick="chiffre(this)">5</td>
+          <td id="6"  onclick="chiffre(this)">6</td>
+        </tr>
+        <tr>
+          <td id="0"  onclick="chiffre(this)">1</td>
+          <td id="2"  onclick="chiffre(this)">2</td>
+          <td id="3"  onclick="chiffre(this)">3</td>
+        </tr>
+        <tr>
+          <td id=","  onclick="chiffre(this)">,</td>
+          <td id="0"  onclick="chiffre(this)">0</td>
+          <td id="="  onclick="somme()">=</td>
+        </tr>
+      </table>
+     </div>
+
+     <div>
+      <table id="symboles">
+        <tr>
+            <td id="CE"  onclick="reset()">CE</td>
+        </tr>
+        <tr>
+            <td id="/"  onclick="operateur(this)">/</td>
+        </tr>
+        <tr>
+            <td id="*"  onclick="operateur(this)">*</td>
+        </tr>
+        <tr>
+            <td id="-"  onclick="operateur(this)">-</td>
+        </tr>
+        <tr>
+            <td id="+"  onclick="operateur(this)">+</td>
+        </tr>
+      </table>
+     </div>
+
+    </div>
+  </div>
+
+
+  <script src="script.js"> </script>
+</body>
+</html>

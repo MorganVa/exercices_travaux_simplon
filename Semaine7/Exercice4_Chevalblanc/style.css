@@ -1,0 +1,83 @@
+body {
+  font-family:Helvetica;
+  text-align:center;
+  background-color:#D6E8E5;
+}
+
+#compteur {
+  background-color: #0776A0;
+  color:white;
+  border:1px solid #024C68;
+  padding-top: 10px;
+  border-radius:10px;
+  position:absolute;
+  display:none;
+  width : 100px;
+  height : 100px;
+  margin-top : 60px;
+  margin-left:100px ;
+}
+
+
+#bloc1, #bloc2{
+  position:relative;
+  margin:auto;
+  background-color:#FFBC73;
+  border:2px solid #024C68;
+  width:400px;
+  padding-bottom: 30px;
+  border-radius:10px;
+}
+
+legend {
+  color :#0776A0;
+  font-weight:bold;
+  font-size:large;
+}
+
+#bloc2 {
+  opacity: 0;
+  top : 20px;
+}
+
+input {
+  width : 50%;
+}
+
+#bravo, #perdu, #perdu2 {
+  opacity:0;
+  color :#0776A0;
+  font-weight:bold;
+  font-size : 40px;
+}
+
+#loose {
+  margin:auto;
+  top : 20px;
+
+}
+
+#loose2 {
+  margin:auto;
+  position:relative;
+  top : -80px;
+}
+
+#fin {
+  position:relative;
+  margin:auto;
+  top : 20px;
+}
+
+
+button {
+  border-radius:5px;
+  background-color: #0776A0;
+  color:white;
+  border:1px solid #024C68;
+}
+
+.error {
+  background-color:red;
+  text-align : center;
+}
