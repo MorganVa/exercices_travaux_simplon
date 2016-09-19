@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title> </title>
+    <link rel="stylesheet" href="compatibiliteTransforms.css">
+  </head>
+
+  <body>
+
+      <header>
+        <h1>Compatibilité avec les différents navigateurs de la propriété transform</h1>
+        <p id="intro">
+          Il est souvent nécessaire d'utiliser les préfixes vendeurs (-webkit-, -moz-, etc.)
+          devant la propriété transform pour utiliser les transformations 2D sur les versions
+          actuelles et passées de navigateurs.
+        </p>
+
+        <ul>
+          <li>
+            <p class="prefixe"> -webkit-transform :</p>
+            <ul>
+              <li>
+                <img src="safari.png" onclick="apparaitre('navigateur1')">
+                <p id="navigateur1">Safari 3.1+ / Safari Mobile (iOS 3.2)</p>
+              </li>
+  <!--TODO inserer image et quand on passe dessus avec la souris affiche texte-->
+              <li>
+                <img src="chrome.png" onclick="apparaitre('navigateur2')">
+                <p id="navigateur2">Chrome 4+ / Chrome Mobile (Android 4)</p>
+              </li>
+              <li>
+                <img src="android.png" onclick="apparaitre('navigateur3')">
+                <p id="navigateur3">Android / Browser 2.1+</p>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <p class="prefixe"> -moz-transform :</p>
+            <ul>
+              <li>
+                <img src="firefox.png" onclick="apparaitre('navigateur4')">
+                <p id="navigateur4">Firefox >= 3.5 à <\16 </p>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <p class="prefixe"> -o-transform :</p>
+            <ul>
+              <li>
+                <img src="opera.png" onclick="apparaitre('navigateur5')">
+                <p id="navigateur5">Opera >= 10.5 à < 12.1</p>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <p class="prefixe"> -ms-transform :</p>
+            <ul>
+              <li>
+                <img src="ie.png" onclick="apparaitre('navigateur6')">
+                <p id="navigateur6">Internet explorer = 9</p>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </header>
+
+  <script src="compatibiliteTransforms.js"> </script>
+  </body>
+
+</html>

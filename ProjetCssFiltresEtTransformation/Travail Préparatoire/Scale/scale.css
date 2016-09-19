@@ -1,0 +1,23 @@
+body {
+  font-family: Helvetica;
+}
+
+#demo {
+  width: 150px;
+  height: 150px;
+  background-color: black;
+  margin: auto;
+}
+
+#demo:hover {
+  transform:scale(1.5);
+transition: all .6s ease-in;
+}
+
+code {
+  color : white;
+  background-color: grey;
+  
+  font-size: 1.1em;
+  padding : 2px;
+}

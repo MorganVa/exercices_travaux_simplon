@@ -1,0 +1,63 @@
+
+@mixin filter($filter){
+  -webkit-filter : $filter;
+  -moz-filter : $filter;
+  -ms-filter : $filter;
+  filter : $filter;
+}
+
+
+
+$handfont : Just Another Hand , sans-serif;
+$textfont : Francois One , sans-serif ;
+$postitcolor : #F0E886 ;
+$pencilcolor : #252525 ;
+
+footer{
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 30px;
+  width: 100vw;
+  text-align: center;
+  color: $pencilcolor;
+  small{
+    font-size: 40px;
+    font-family: $handfont ;
+  }
+}
+
+nav {
+  width: 100%;
+  div {
+    font-family: $handfont ;
+    font-size: 45px;
+    color : $pencilcolor;
+    background-color: skyblue ;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, .5);
+    width: 15vw;
+    height: 80px;
+    margin: 0 16.5vw;
+    text-align: center;
+    line-height: 80px;
+    display: inline-block;
+    letter-spacing: 4px;
+
+    transition: all .3s ease-in-out ;
+  }
+  div:hover {
+    width: 20vw;
+    margin: 0 14vw ;
+  }
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image: url("images/bg.png");
+}
+
+
+p , li , ul , h1 {
+  margin-left: 30px;
+}
