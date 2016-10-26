@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="description" content="[Mémo]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<style>
+
+body {
+  font-family: Helvetica;
+  text-align: center;
+}
+
+#tempsGlobal {
+  font-style: italic;
+}
+
+.face{
+  height: 210px;
+  width : 120px;
+  border-radius: 20px;
+  margin : 10px;
+  transform:none;
+  transition: all .6s ease-in;
+}
+
+.dos {
+  background-color: grey;
+  transform:rotateY(180deg);
+  transition: all .6s ease-in;
+}
+
+.cartesMemo{
+  display: flex;
+  justify-content: center;
+
+}
+
+.win {
+  visibility: hidden;
+  color:green;
+  margin-top: 5px;
+}
+
+.loose {
+  visibility: hidden;
+  color:red;
+  margin-bottom: 10px;
+}
+
+.afficheStatut {
+  transform: scale(2.5);
+  transition: all .6s ease-in;
+}
+
+</style>
+
+<body onload="couleurInit()">
+
+  <header>
+    <h1>Bienvenue sur le jeu de mémo</h1>
+  </header>
+  <p>
+    Retournez les cartes et retrouvez les paires ! <p id="time"></p>
+  </p>
+
+
+  <div class="cartesMemo">
+    <div style="background-color:grey" class="face"  id="c0" onclick="showColor('c0')"></div>
+    <div style="background-color:grey" class="face"  id="c1" onclick="showColor('c1')"></div>
+    <div style="background-color:grey" class="face"  id="c2" onclick="showColor('c2')"></div>
+    <div style="background-color:grey" class="face"  id="c3" onclick="showColor('c3')"></div>
+  </div>
+
+  <div id="gagne" class="win" > Vous avez gagné !</div>
+  <div id="perdu" class="loose" > Vous avez perdu !  </div>
+
+  <div class="cartesMemo">
+    <div style="background-color:grey" class="face" id="c4" onclick="showColor('c4')"></div>
+    <div style="background-color:grey" class="face" id="c5" onclick="showColor('c5')"></div>
+    <div style="background-color:grey" class="face" id="c6" onclick="showColor('c6')"></div>
+    <div style="background-color:grey" class="face" id="c7" onclick="showColor('c7')"></div>
+  </div>
+
+
+  <script src ="script.js">
+
+  </script>
+
+</body>
+</html>
