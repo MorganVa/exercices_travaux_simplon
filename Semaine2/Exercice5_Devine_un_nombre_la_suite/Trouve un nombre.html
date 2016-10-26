@@ -1,0 +1,137 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Trouve un nombre...</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+/*Devine un nombre - la suite
+
+Ecrire un programme qui
+
+tire un nombre entier au sort ( entre 0 et 100 )
+le fait deviner à l’aide d’indices ‘Plus grand’, ‘plus petit’, ‘Beaucoup plus grand’, ‘Beaucoup plus petit’
+( “Beaucoup” si plus de 10 d’écart )
+permet de continuer de jouer jusqu’à ce qu’on devine.
+*/
+
+
+
+    //tire un nombre entier au sort (entre 0 et 100)
+    var nombreTireAuSort = (Math.floor(Math.random()*100));
+    console.log('nombreTireAuSort', nombreTireAuSort);
+    proceed=true;
+
+  while(proceed) {
+
+    //Pose question à utilisateur
+    var reponseQuestion1 = prompt ("Donne un nombre entre 0 et 100.")
+    console.log('reponseQuestion1', reponseQuestion1); // on affiche la réponse à la question 1 dans la console
+
+          // Si nombre donné est le bon
+          if (reponseQuestion1 == nombreTireAuSort){
+            alert ('Tu as trouvé !!! You are a winner!!!');
+            proceed=false;
+          }
+
+          // Si nombre donné est trop grand
+          else if (reponseQuestion1 > nombreTireAuSort) {
+
+            if (reponseQuestion1 > 100) {
+              alert ('Le nombre donné est supérieur à 100, recommence');
+            }
+
+             else if (reponseQuestion1 > (nombreTireAuSort+10)) {
+            alert ('Le nombre donné est beaucoup trop élévé (supérieur de 10 au moins), recommence.');
+            }
+
+            else {
+              alert ('Le nombre donné est trop élévé , recommence.');
+            }
+          }
+
+
+          // Si nombre donné est trop petit
+          else if (reponseQuestion1 < nombreTireAuSort){
+
+            if (reponseQuestion1 < 0){
+              alert ('Le nombre donné n est pas compris entre 0 et 100, recommence.');
+            }
+
+            else if (reponseQuestion1 < (nombreTireAuSort-10)){
+           alert ('Le nombre donné est beaucoup trop petit (inférieur de 10 au moins), recommence.');
+           }
+
+           else {
+             alert ('Le nombre donné est trop petit, recommence.');
+           }
+         }
+
+          else {
+            alert ('Erreur, ceci n est pas un nombre, recommence');
+          }
+    }
+
+
+    //corection détaillée
+
+    //tirage hasar d'un nombre <100
+    var hasard = Math.floor(Math.random()*100);
+      //Math.random() >> [entre 0 et 1]
+      // >> * 100 >> [entre 0 et 100]
+      //[si on veut entre 5 et 100] >> 5+[0-95]
+      var reponse;
+      while (reponse != hasard){
+        //affichage d'un prompt et récupération de la réponse donnée
+        reponse = prompt("Nombre entre 0 et 100");
+        reponse = parseInt(reponse);
+
+        if (isNaN(reponse))
+          alert("Ce n'est pas un nombre");
+        else if(reponse < 0 || reponse > 100)
+          alert("reponse invalide");
+        else {
+            //comparaison de la réponse et du nombre à trouver
+            if (reponse === hasard)
+              alert("Bravo");
+            else {
+              //donner un indice : plus petit, plus grand
+              //Beaucoup plus petit, beaucoup plus grand
+              var indice;
+              var difference = hasard - reponse;
+
+                if (difference >10)
+                  indice = "Beaucoup plus grand";
+                else if (difference >0)
+                  indice = "Plus grand";
+                else if (difference <-10)
+                  indicie = "Beaucoup plus petit";
+                else
+                  indice = "Plus petit";
+
+                  /*  attention à l'ordre des conditions
+
+                    if (difference >0)
+                      indice = "Plus grand";
+                    else if (difference >10)
+                        indice = "Beaucoup plus grand";
+                    else if (difference <-10)
+                      indicie = "Beaucoup plus petit";
+                    else
+                      indice = "Plus petit";
+                  */
+                alert(indice + '-' + hasard);
+            }
+        }
+      }
+
+    //
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title> Calculatrice... </title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+
+var proceed=true
+
+//Boucle pour reposer la question si donnée entrée n'est pas bonne
+while (proceed) {
+
+  //Definition des variables
+
+  var symboleMathematiques = prompt("Veuillez choisir un symbole parmis les suivants : + - / ou *")
+
+    // SI l'Uti. chosit un symbole demandé
+    if ((symboleMathematiques == "+") || (symboleMathematiques == "-") || (symboleMathematiques == "*") || (symboleMathematiques == "/" )) {
+        var choixPremierChiffre = (parseInt(prompt(" Veuillez choisir un premier chiffre.")))
+        var choixDeuxiemeChiffre = (parseInt(prompt("Veuillez choisir un deuxième chiffre.")))
+
+            //Switch pour les diverses réponses
+            switch (symboleMathematiques) {
+
+                // Si l'utilisateur choisit l'addition
+                case "+" :
+
+                    //SI le choix 1 et le Choix 2 sont bien des chiffres
+                      if (!isNaN(choixPremierChiffre) && !isNaN(choixDeuxiemeChiffre)){
+                        var resultatAddition = choixPremierChiffre+choixDeuxiemeChiffre ;
+                        console.log (resultatAddition);
+                          //Affichage du calcul et du résultat
+                        alert (choixPremierChiffre + " + " + choixDeuxiemeChiffre + " = " + resultatAddition);
+                        proceed=false;
+                      }
+                      else {
+                        alert ('Mauvaise donnée');
+                      }
+                      break;
+
+                    // Si l'utilisateur choisit la soustraction
+                    case "-" :
+                    //SI le choix 1 et le Choix 2 sont bien des chiffres
+                      if (!isNaN(choixPremierChiffre) && !isNaN(choixDeuxiemeChiffre)){
+                        var resultatSoustraction = choixPremierChiffre-choixDeuxiemeChiffre ;
+                        console.log (resultatSoustraction);
+                          //Affichage du calcul et du résultat
+                        alert (choixPremierChiffre + " - " + choixDeuxiemeChiffre + " = " + resultatSoustraction);
+                        proceed=false;
+                      }
+                      else {
+                        alert ('Mauvaise donnée');
+                      }
+                      break;
+
+                    // Si l'utilisateur choisit la Division
+                    case "/" :
+                    //SI le choix 1 et le Choix 2 sont bien des chiffres
+                      if (!isNaN(choixPremierChiffre) && !isNaN(choixDeuxiemeChiffre)){
+                        var resultatDivision = choixPremierChiffre/choixDeuxiemeChiffre ;
+                        console.log (resultatDivision);
+                          //Affichage du calcul et du résultat
+                        alert (choixPremierChiffre + " / " + choixDeuxiemeChiffre + " = " + resultatDivision);
+                        proceed=false;
+                      }
+                      else {
+                        alert ('Mauvaise donnée');
+                      }
+                      break;
+
+                    // Si l'utilisateur choisit la Multiplication
+                    case "*" :
+                    //SI le choix 1 et le Choix 2 sont bien des chiffres
+                      if (!isNaN(choixPremierChiffre) && !isNaN(choixDeuxiemeChiffre)){
+                        var resultatMultiplication = choixPremierChiffre*choixDeuxiemeChiffre ;
+                        console.log (resultatMultiplication);
+                          //Affichage du calcul et du résultat
+                        alert (choixPremierChiffre + " * " + choixDeuxiemeChiffre + " = " + resultatMultiplication);
+                        proceed=false;
+                      }
+                      else {
+                        alert ('Mauvaise donnée');
+                      }
+                      break;
+
+                    default:
+                    alert ('Ceci n\'est pas un symbole, recommencez');
+                }
+              }
+//Si l'utilisateur n'a pas choisi un symbole, la boucle recommence au début
+    else {
+      alert ('Vous n\'avez pas choisi un bon symbole, recommencez !');
+    }
+}
+
+  // Correction detaillée
+
+      // Récupérer une opération
+      var operation = prompt("opération : + - * / ?");
+
+      // Récupérer une 1ère valeur
+      var valeur1 = parseInt(prompt("valeur1 ?"));
+
+      // Recuperer une 2eme valeur
+      var valeur2 = parseInt(prompt ("valeur 2 ?"));
+
+      // Calculer resultat de l'operation
+
+        // Si valeur numériques invalides
+        if(isNaN(valeur1)== true || isNaN(valeur2) == true){
+          // isNaN(valeur1)==true peut être remplacé par isNaN(valeur1)(sous entendu true)
+          //pour fonction qui renvoie true ou false
+          alert ("Valeurs invalides");
+        } else { //sinon
+          var resultat;
+          if (operation =="+")
+            resultat = valeur1 + valeur2;
+          else if (operation == "-")
+            resultat = valeur1-valeur2;
+          else if (operation == "*")
+            resultat = valeur1*valeur2;
+          else if (operation == "/")
+            resultat = valeur1/valeur2;
+          else
+            alert ("Opération invalide");
+        /*
+        if (resultat) // Si resultat existe et a une valeur1
+        // Afficher le résultat
+        alert ("resultat : " +resultat);
+        */
+        alert (resultat?/*si il y a 1 resultat on affiche*/"resultat :"+resultat :/*: veut sire sinon*/ "Calcul invalide")
+      }
+
+
+
+
+</script>
+
+
+</body>
+</html>

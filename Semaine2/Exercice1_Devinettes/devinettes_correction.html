@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>De quelle couleur...</title>
+</head>
+<body>
+<script type="text/javascript">
+    var question1 = "De quelle couleur est le cheval blanc d'Henri IV ?";
+    var question2 = "Combien y a t il de sept nains ?";
+    // on affiche la question
+    var reponseQuestion1 = prompt(question1);
+    console.log('reponseQuestion1', reponseQuestion1); // on affiche la réponse dans la console
+    // si la réponse donnée est "blanc"
+    if(reponseQuestion1 == "blanc"){
+        alert('Bravo');
+        // affichage de la 2nde question
+        var reponseQuestion2 = prompt(question2);
+        // si la réponse données est 7
+        if( reponseQuestion2 == "7" ){
+            alert('Bravo');
+        } else {
+            alert('Erreur');
+            reponseQuestion2 = prompt(question2);
+            alert(reponseQuestion2 == "7" ? 'Bravo' : 'Erreur');
+        }
+    } else {
+        alert('Erreur');
+        reponseQuestion1 = prompt(question1);
+        //var messageAlerte = reponseQuestion1 == "blanc" ? 'Bravo' : 'Erreur';
+        alert( (reponseQuestion1 == "blanc") ? 'Bravo' : 'Erreur');
+        /*if(reponseQuestion1 == "blanc")
+            alert('Bravo');
+        else
+            alert ('Erreur');
+        */
+        // affichage de la 2nde question
+        var reponseQuestion2 = prompt(question2);
+        // si la réponse données est 7
+        if( reponseQuestion2 == "7" ){
+            alert('Bravo');
+        } else {
+            alert('Erreur');
+            reponseQuestion2 = prompt(question2);
+            alert(reponseQuestion2 == "7" ? 'Bravo' : 'Erreur');
+        }
+    }
+</script>
+
+
+</body>
+</html>

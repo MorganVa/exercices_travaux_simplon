@@ -1,0 +1,85 @@
+.demo {
+    width: 300px;
+    height: 150px;
+    background-color: skyblue;
+    margin: auto;
+}
+
+#demo_scale:hover {
+    transform:scale(1.5);
+    transition: all .6s ease-in;
+}
+
+#demo_skew:hover {
+    transform:skew(15deg, 15deg);
+    transition: all .6s ease-in;
+}
+
+#demo_rotate:hover {
+    transform:rotate(180deg);
+    transition: all .6s ease-in;
+}
+
+#demo_translate:hover {
+    transform:translate(20px, 20px);
+    transition: all .6s ease-in;
+}
+
+#demo_matrix:hover {
+    transform:matrix(1.39162, 0.562252, 0.300767, 1.70574, 40, 0);
+    transition: all .6s ease-in;
+}
+
+span {
+    font-weight: bold;
+}
+
+.demonstration {
+  text-align: center;
+  flex-direction: column;
+
+}
+
+#demonstration_origin {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+#texte1 {
+    margin-left: 20px;
+}
+
+#texte2 {
+    margin: 0;
+}
+
+.box {
+  background: lightblue;
+  width: 200px;
+  height: 200px;
+  transition: transform 1s linear;
+  margin: auto;
+}
+
+.box2 {
+  background: lightblue;
+  width: 200px;
+  height: 200px;
+  transition: transform 1s linear;
+  transform-origin: top left;
+  margin: auto;
+}
+
+.box-rotate {
+  transform: rotate(360deg);
+}
+
+#texte {
+  margin: 10px auto;
+}
+
+button {
+  margin: 10px auto;
+  display: block;
+}

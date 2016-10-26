@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+    <title> Calcul mental </title>
+  </head>
+
+  <body>
+  <script type="text/javascript">
+
+
+
+/* => pour jouer 3 fois de suite mais ne permet pas de donner 3 BONNES reponses mais
+3 reponses tout court for (i=0; i<3; i++)*/
+
+    /*Je génère un nombre au hasard entre 0 et 10*/
+    function genereUnNombre () {
+      var nombreHasard = (Math.floor(Math.random() *11));
+      return (nombreHasard);
+    }
+
+
+    /* Je tire au hasard un symbole dans le tableau des symboles */
+    function genereOperateur () {
+      var symboleMaths = ["+","-","*"];
+      var numRandom = Math.floor(Math.random()*symboleMaths.length);
+      var symboleRandom = symboleMaths[numRandom];
+      return symboleRandom;
+    }
+
+
+    /* afficher TOUS les elements du tableau 1 par 1
+    for (i=0; i<symboleMaths.length; i++){
+      console.log(symboleMaths[i]);
+    }
+    */
+    var x = 0;
+
+
+/*fonction pour jouer*/
+function play (){
+  var nombre1 = genereUnNombre();
+  var nombre2 = genereUnNombre();
+  var operateur1= genereOperateur();
+
+  reponse = eval(nombre1+ operateur1 + nombre2); /*Eval pour dire qu'il y a 1 operation*/
+  console.log("reponse ",reponse);
+
+  var demandeReponse = parseInt(prompt("Combien font "+ nombre1+operateur1+nombre2+" ?"));
+  console.log("reponse utilisateur ", demandeReponse);
+
+          if (demandeReponse === reponse){
+            x++;
+            alert("Vous avez donné "+ x +" bonne(s) réponse(s)");
+                if (x===3) {
+                alert ("Bravo,passons à la suite");
+                playBis()
+                }
+                else {
+                  play();
+                }
+          }
+
+          else if (isNaN(demandeReponse)) {
+            alert("Erreur, ceci n'est pas un nombre");
+            playAgain();
+            play();
+          }
+
+          else {
+            playAgain();
+            play();
+          }
+
+  function playAgain() { //on repose la même question à utilisateur//
+    var demandeReponse = parseInt(prompt("Faux!Combien font "+ nombre1+operateur1+nombre2+" ?")) ;
+    console.log("reponse utilisateur ", demandeReponse);
+
+        if (demandeReponse === reponse) {
+          x++
+            alert("Bravo vous avez donné "+ x +" bonne(s) réponse(s)");
+        }
+
+        else {
+            playAgain();
+        }
+  }
+}
+
+  function playBis () { // si util. a donné 3 bonnes réponses, on passe à l'extra//
+
+    var nombre1 = genereUnNombre();
+    var nombre2 = genereUnNombre();
+    var nombre3 = genereUnNombre ();
+    var operateur1= genereOperateur();
+    var operateur2 = genereOperateur ();
+
+    var reponseExtra = eval(nombre1+ operateur1 + nombre2+operateur2+nombre3); /*Eval pour dire qu'il y a 1 operation*/
+    console.log("reponse à extra ",reponseExtra);
+
+    var demandeExtra = parseInt(prompt("Voyons si vous ête si fort que ça !!! Combien font "+nombre1+operateur1+nombre2+operateur2+nombre3+ " ?") )
+    console.log("reponse utilisateur à extra ", demandeExtra);
+
+    if (demandeExtra === reponseExtra) {
+      alert ("Bravo vous avez fini le jeu de calcul mental !!! ");
+    }
+
+    else {
+      alert("Vous n'avez pas donné la bonne réponse, recommencez du début !");
+      play()
+    }
+  }
+
+play();
+
+
+
+    /* Première version de l'exercice ==> PAS BON car variables pas reutilisables
+
+    for (i=0; i<3; i++) {
+
+      //tire un nombre entier au sort (entre 0 et 2)
+      var nombreTireAuSort = (Math.floor(Math.random() *3));
+      console.log ("Nombre tire au sort", nombreTireAuSort);
+
+      var premierChiffreAuSOrt= (Math.floor(Math.random() *11));
+        console.log ("Premier chiffre tire au sort", premierChiffreAuSOrt);
+      var deuxiemeChiffreAuSort = (Math.floor(Math.random() *11));
+        console.log ("Deuxième chiffre tire au sort", deuxiemeChiffreAuSort);
+
+      //en fonction du nombre tiré au sort, défini un symbole mathematiques
+        switch (nombreTireAuSort) {
+          case 0:
+            var symboleMaths = "-";
+            var reponse=premierChiffreAuSOrt - deuxiemeChiffreAuSort;
+            console.log("réponse ", reponse);
+            break;
+
+          case 1 :
+            var symboleMaths = "+";
+            var reponse=premierChiffreAuSOrt + deuxiemeChiffreAuSort;
+            console.log("réponse ", reponse);
+            break;
+
+          case 2:
+            var symboleMaths = "*";
+            var reponse=premierChiffreAuSOrt * deuxiemeChiffreAuSort;
+            console.log("réponse ", reponse);
+            break;
+
+          default:
+            alert("erreur");
+          }
+
+      console.log ("symboleMaths", symboleMaths); //affiche symbole mathématiques tiré au sort
+
+      var demandeReponse = parseInt(prompt("Combien font "+ premierChiffreAuSOrt +" "+ symboleMaths+" "+deuxiemeChiffreAuSort + " ?"));
+
+      if (demandeReponse === reponse){
+          alert("Bravo");
+      }
+
+      else if (isNaN(demandeReponse)) {
+        alert("Erreur, ceci n'est pas un nombre");
+      }
+
+      else {
+        alert("Erreur");
+      }
+  }
+
+  var troisiemeChiffreAuSOrt =(Math.floor(Math.random() *11));
+    console.log ("Troisième chiffre tire au sort", troisiemeChiffreAuSOrt);
+*/
+
+    </script>
+  </body>
+</html>

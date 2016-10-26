@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="CSS_index.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
+        <title>Filtres et Transformations CSS</title>
+    </head>
+
+
+    <body>
+
+      <!-- HEADER CONTENT -->
+        <header>
+            <div id="header"><img src="images/header.png"></div>
+        </header>
+        <nav>
+            <a href="HTML_filtres.html"><div class="buttonnav" onmouseover="animatecur(0)" >Filtres</div></a>
+            <a href="HTML_transform.html"><div class="buttonnav" onmouseover="animatecur(1)" >Transformations</div></a>
+        </nav>
+
+        <div id="listcontainer" onmouseout="animateremove()" >
+          <div class="listcontent" onmouseover="animatecur(0)" onmouseout="animateremove()" >
+            <a href="HTML_filtres.html#1">GRAYSCALE et BLUR</a>
+            <a href="HTML_filtres.html#2">SATURATE, SEPIA et HUE-ROTATE</a>
+            <a href="HTML_filtres.html#3">INVERT, BRIGHTNESS et CONSTRAST</a>
+            <a href="HTML_filtres.html#4">OPACITY et DROP-SHADOW</a>
+          </div>
+          <div class="listcontent" onmouseover="animatecur(1)" onmouseout="animateremove()" >
+            <a href="HTML_transform.html#1">SCALE et SKEW</a>
+            <a href="HTML_transform.html#2">ROTATE et TRANSLATE</a>
+            <a href="HTML_transform.html#3">MATRIX</a>
+            <a href="HTML_transform.html#4">TRANSFORM-ORIGIN</a>
+          </div>
+        </div>
+
+<!-- PAGE CONTENT -->
+
+        <section>
+
+          <!-- POST IT NOTES -->
+          <div id="postit">-BLAGUE SOLENN<br>-BLAGUE SOLENN<br>-BLAGUE ANNA<br>-BLAGUE ANNA<br>-BLAGUE MARIYAM</div>
+            <div id="postit2">-BLAGUE MARIYAM<br>-Honhonhon<br>-Oui Oui Baguette<br></div>
+
+            <!-- COMPABILITY CHECKERS -->
+
+            <article>
+                <div class="compabilite" >
+                    <img src="icons/chrome.png" alt="chrome" />
+                    <p> -CHROME : -WEBKIT <span>- - - Chrome 4+ / Chrome Mobile (Android 4)</span></p>
+                </div>
+                <br>
+                <div class="compabilite" style="padding-left:80px">
+                    <img src="icons/safari.png" alt="safari" />
+                    <p> -SAFARI : -WEBKIT <span>- - - Safari 3.1+ / Safari Mobile (iOS 3.2)</span></p>
+                </div>
+                <br>
+                <div class="compabilite" style="padding-left:160px">
+                    <img src="icons/opera.png" alt="opera" />
+                    <p> -OPERA : -WEBKIT <span>- - - Opera >= 10.5 à < 12.1</span></p>
+                </div>
+                <br>
+                <div class="compabilite" style="padding-left:240px">
+                    <img src="icons/firefox.png" alt="firefox" />
+                    <p> -MOZILLA : -MOZ <span>- - - Firefox >= 3.5 à <\16 </span></p>
+                </div>
+                <br>
+                <div class="compabilite" style="padding-left:320px">
+                    <img src="icons/ie.png" alt="internet explorer" />
+                    <p> -INTERNET EXPLORER : -MS <span>- - - Internet explorer = 9</span></p>
+                </div>
+
+            </article>
+        </section>
+
+        <!-- BACKGROUND -->
+        <div id="page"></div>
+        <div id="crayon"></div>
+        <div id="rap"></div>
+        <div id="ink1"></div>
+        <div id="ink2"></div>
+        <div id="ink3"></div>
+        <div id="ink4"></div>
+        <div id="mark"></div>
+
+        <!-- FOOTER AND SCRIPT LOADER -->
+        <footer>
+            <small>© Copyright 2016, Tous droits r&eacute;serv&eacute;s Solenn, Denis, Mariyam, Anna</small>
+        </footer>
+        <script>
+        function animatecur(i) {
+          document.getElementsByClassName("listcontent")[i].style.height = "200px" ;
+          console.log("something");
+        }
+        function animateremove(){
+          document.getElementsByClassName("listcontent")[0].style.height = "0px" ;
+          document.getElementsByClassName("listcontent")[1].style.height = "0px" ;
+        }
+        </script>
+    </body>
+</html>

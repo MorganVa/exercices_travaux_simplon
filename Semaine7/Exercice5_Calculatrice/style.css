@@ -1,0 +1,57 @@
+#global {
+  height:400px;
+  width : 300px;
+  background-color:pink;
+  border:2px solid black;
+  margin:auto;
+}
+
+#ecran {
+  height:140px;
+  width : 300px;
+  background-color: white;
+  font-size: 50px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+  color:#4B9188;
+  overflow: hidden;
+}
+
+
+#texte {
+  font-family : Helvetica;
+}
+
+input{
+  height:63px;
+  width:67px;
+  background-color: #313938;
+  color:white;
+  text-align:center;
+  font-size:large;
+}
+
+#chiffres, #symboles{
+  border-collapse: collapse;
+  float : left;
+}
+
+#chiffres td{
+  height:63px;
+  width:67px;
+  background-color: #313938;
+  color:white;
+  text-align:center;
+  font-size:large;
+}
+
+#symboles td{
+
+  border-left:1px solid white;
+  width : 90px;
+  height:50px;
+  background-color: #8F9F9D;
+  color:white;
+  text-align:center;
+}

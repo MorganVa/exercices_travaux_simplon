@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+      <head>
+          <meta charset="utf-8">
+          <link rel="stylesheet" href="filtres.css">
+          <title>Filtres et Transformations</title>
+    </head>
+
+    <body>
+
+        <!-- creation du header et du menu de navigation -->
+        <header>
+            <a href="index.html">Retour à l'index, temporaire</a><br / />
+            <a href="transform.html">Aller vers Transform, temporaire</a>
+        </header>
+
+        <section id="introduction_filtres">
+            <header>
+                <h1>Les filtres</h1>
+            </header>
+
+            <div>
+                <p>Dans ce cours, nous allons nous intéresser à une excellente nouvelle fonctionnalité de CSS3 : les filtres. C'est une fonctionnalité qui peut être utilisée à la fois sur des éléments HTML et des images, mais qui a plus d'intérêt à être utilisée sur des images comme pour la création d'une galerie, par exemple. Notons que comme la plupart des nouvelles fonctionnalités de CSS3, il faudra utiliser les préfixes de propriété.</p>
+                <p>Notez que l'on utilise soit le pourcentage, soit les pixels (ceci est précisé pour chaque filtre).</p>
+                <p>En utilisant uniquement le CSS vous allez être capable de créer tous les effets suivants :</p>
+
+                <ul>
+                    <li id="none">None (par défaut) </li>
+                    <li id="greyscale">Grayscale </li>
+                    <li id="blur">Blur </li>
+                    <li id="saturate">Saturate </li>
+                    <li id="sepia">Sepia </li>
+                    <li id="hue_rotate">Hue-rotate </li>
+                    <li id="invert">Invert </li>
+                    <li id="br /ightness">Brightness </li>
+                    <li id="contrast">Contrast </li>
+                    <li id="opacity">Opacity </li>
+                    <li id="drop_shadow">Drop-Shadow </li>
+                </ul>
+            </div>
+        </section>
+<script>var hotel</script>
+        <section id="grayscale">
+            <a name="1"></a><!-- lien avec une ancre pour le menu de l'index -->
+            
+            <header>
+                <h1>Grayscale</h1>
+            </header>
+
+            <div>
+                <p>Cette propriété va convertir votre image en nuances de gris (noir et blanc).</p>
+                <p>La valeur du filtre peut-être soit un pourcentage soit un nombre décimal. </p>
+                <p>La valeur 0 ou 0% n'aura aucun effet, il s'agit de la valeur par défaut (none) et 1 ou 100% transformera l'image en noir et blanc total.</p>
+            </div>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_grayscale" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#grayscale #filtre_greyscale:hover </span> {<br />
+                        filter: greyscale(<span class="texte_violet">0.7</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: grayscale(<span class="texte_violet">0.7</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: grayscale(<span class="texte_violet">0.7</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+
+        <section id="blur">
+            
+            <header>
+                <h1>Blur</h1>
+            </header>
+
+            <div>
+                <p>Cet effet appliquera à votre image un flou qui sera plus ou moins important en fonction de la valeur de la propriété.</p>
+                <p>Le flou sera mesuré en pixels ; plus la valeur sera grande et plus l'image sera floutée.</p>
+            </div>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_blur" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#blur #filtre_blur:hover </span> {<br />
+                        filter: blur(<span class="texte_violet">5</span><span class="texte_rouge">px</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: blur(<span class="texte_violet">5</span><span class="texte_rouge">px</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: blur(<span class="texte_violet">5</span><span class="texte_rouge">px</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+            
+        <section id="saturate">
+            <a name="2"></a><!-- lien avec une ancre pour le menu de l'index -->
+            
+            <header>
+                <h1>Saturate</h1>
+            </header>
+
+            <div>
+                <p>Cet effet ajoute de la saturation sur les couleurs de votre image.</p>
+                <p>La valeur de la propriété peut être un nombre décimal ou un pourcentage, sachant que la saturation par défaut est de 100%.</p>
+                <p>Pour ajouter de la saturation, il faut donc renseigner une valeur supérieure à 100%.</p>
+            </div>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_saturate" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#saturate #filtre_saturate:hover </span> {<br />
+                        filter: saturate(<span class="texte_violet">500</span><span class="texte_rouge">%</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: saturate(<span class="texte_violet">500</span><span class="texte_rouge">%</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: saturate(<span class="texte_violet">500</span><span class="texte_rouge">%</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <section id="sepia">
+            
+            <header>
+                <h1>Sepia</h1>
+            </header>
+
+            <div>
+                <p>Cet effet va ajouter une teinte sepia à votre image ce qui donne l'impression que c'est une vieille photographie.</p>
+                <p>La valeur du filtre peut-être soit un pourcentage, soit un nombr /e décimal.</p>
+                <p>La valeur 0 ou 0% n'aura aucun effet, il s'agit de la valeur par défaut (none) et 1 ou 100% transformera totalement l'image.</p>
+            </div>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_sepia" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#sepia #filtre_sepia:hover </span> {<br />
+                        filter: sepia(<span class="texte_violet">0.7</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: sepia(<span class="texte_violet">0.7</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: sepia(<span class="texte_violet">0.7</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <section id="hue_rotate">
+            
+            <header>
+                <h1>Hue-rotate</h1>
+            </header>
+
+            <div>
+                <p>Cet effet va changer la couleur de l'image qui sera complètement différente en fonction du degré que vous affecterez en CSS.</p>
+                <p>La meilleure représentation de cet effet est de penser à une roue de spectres de couleur. </p>
+                <p>La couleur de départ sera modifiée pour une nouvelle couleur qui correspondra à la valeur attribuée à la propriété hue-rotate.</p>
+            </div>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_hue_rotate" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#hue_rotate #filtre_hue_rotate:hover </span> {<br />
+                        filter: hue-rotate(<span class="texte_violet">200</span><span class="texte_rouge">deg</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: hue-rotate(<span class="texte_violet">200</span><span class="texte_rouge">deg</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: hue-rotate(<span class="texte_violet">200</span><span class="texte_rouge">deg</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <section id="invert">
+            <a name="3"></a><!-- lien avec une ancre pour le menu de l'index -->
+            
+            <header>
+                <h1>Invert</h1>
+            </header>
+
+            <div>
+                <p>Cet effet va changer l'apparence de l'image qui ressemblera à un négatif (dans le temps où l'on développait encore nos photos).</p>
+                <p>La valeur du filtre peut-être soit un pourcentage, soit un nombre décimal.</p>
+                <p>La valeur 0 ou 0% n'aura aucun effet, il s'agit de la valeur par défaut (none) et 1 ou 100% transformera totalement l'image.</p>
+            </div>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_invert" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#invert #filtre_invert:hover </span> {<br />
+                        filter: invert(<span class="texte_violet">0.7</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: invert(<span class="texte_violet">0.7</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: invert(<span class="texte_violet">0.7</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <section id="brightness">
+            
+            <header>
+                <h1>brightness</h1>
+            </header>
+
+            <div>
+                <p>Cet effet permet de modifier la luminosité de l'image.</p>
+                <p>La valeur du filtre peut-être soit un pourcentage, soit un nombr /e décimal.</p>
+                <p>La valeur 0 ou 0% n'aura aucun effet, il s'agit de la valeur par défaut (none) et 1 ou 100% transformera totalement l'image.</p>
+            </div>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_br /ightness" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#br /ightness #filtre_br /ightness:hover </span> {<br />
+                        filter: br /ightness(<span class="texte_violet">0.7</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: br /ightness(<span class="texte_violet">0.7</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: br /ightness(<span class="texte_violet">0.7</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <section id="contrast">
+            
+            <header>
+                <h1>Contrast</h1>
+            </header>
+
+            <div>
+                <p>Cet effet va modifier le contraste de l'image, c'est-à-dire la différence entre les zones sombres et les zones claires.</p>
+                <p>La valeur du filtre peut-être soit un pourcentage, soit un nombre décimal. </p>
+                <p>La valeur 0 ou 0% n'aura aucun effet, il s'agit de la valeur par défaut (none) et 1 ou 100% transformera totalement l'image.</p>
+            </div>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_contrast" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#contrast #filtre_contrast:hover </span> {<br />
+                        filter: contrast(<span class="texte_violet">0.7</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: contrast(<span class="texte_violet">0.7</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: contrast(<span class="texte_violet">0.7</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <section id="opacity">
+            <a name="4"></a><!-- lien avec une ancre pour le menu de l'index -->
+            
+            <header>
+                <h1>Opacity</h1>
+            </header>
+
+            <div>
+                <p>Cette fonction permet de régler l'opacité de l'image d'entrée. La valeur de l'argument indique la force de l'opacité.</p>
+                <p>Ainsi, une valeur de 0% rendra l'image complètement transparente et une valeur de 100% conservera l'image telle quelle.</p>
+                <p>Les valeurs intermédiaires appliqueront des effets proportionnels.</p>
+                <p>La valeur par défaut de l'argument est 1.</p>
+                <p>Cette fonction est proche de la propriété opacity, toutefois, avec les filtres, certains navigateurs utilisent l'accélération matérielle, ce qui permet d'obtenir de meilleures performances.</p>
+            </div>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_opacity" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#opacity #filtre_opacity:hover </span> {<br />
+                        filter: opacity(<span class="texte_violet">0.7</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: opacity(<span class="texte_violet">0.7</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: opacity(<span class="texte_violet">0.7</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <section id="drop_shadow">
+            
+            <header>
+                <h1>Drop-Shadow</h1>
+            </header>
+
+            <div>
+                <p>Cette fonction permet d'ajouter une ombre portée à une image.</p>
+                <p>La fonction de feuille de style drop-shadow(offset-x offset-y spread-radius color) CSS peut prendre comme paramètres:</p>
+                <ul>
+                    <li>offset-x : valeur numérique obligatoire qui spécifie la distance horizontale de l'ombre, si elle est négative l'ombre est placée à gauche</li>
+                    <li>offset-y : valeur numérique obligatoire qui spécifie la distance verticale de l'ombre, si elle est négative l'ombre est placée au dessus</li>
+                    <li>spread-radius : valeur optionnelle numérique positive suivie de <span class="texte_rouge">px</span> ou % ou pt ou em, correspond à la longueur du rayon d'étendue</li>
+                    <li>color, couleur (rgb, nommée,...) ex: #9ACD32</li>
+                </ul>
+            </div>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_drop_shadow" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#drop_shadow #filtre_drop_shadow:hover </span> {<br />
+                        filter: drop-shadow(<span class="texte_violet">16</span><span class="texte_rouge">px</span> <span class="texte_violet">16</span><span class="texte_rouge">px</span> <span class="texte_violet">20</span><span class="texte_rouge">px</span> <span class="texte_bleu">blue</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: drop-shadow(<span class="texte_violet">16</span><span class="texte_rouge">px</span> <span class="texte_violet">16</span><span class="texte_rouge">px</span> <span class="texte_violet">20</span><span class="texte_rouge">px</span> <span class="texte_bleu">blue</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: drop-shadow(<span class="texte_violet">16</span><span class="texte_rouge">px</span> <span class="texte_violet">16</span><span class="texte_rouge">px</span> <span class="texte_violet">20</span><span class="texte_rouge">px</span> <span class="texte_bleu">blue</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <section id="combinaison">
+            
+            <header>
+                <h1>Est-il possible de combiner des filtres ?</h1>
+                <h2>Oui, voici un exemple pratique.</h2>
+            </header>
+
+            <article>
+                <div>
+                    <img src="images/original.png" alt="exemple_filtre" id="filtre_combinaison" />
+                </div>
+
+                <div class="code">
+                    <h1>Code appliqu&eacute; :</h1>
+                    <code>
+                        <span class="texte_vert">#combinaison #filtre_combinaison:hover </span> {<br />
+                        filter: brightness(<span class="texte_violet">0.5</span>) opacity(<span class="texte_violet">0.9</span>) saturate(<span class="texte_violet">500</span><span class="texte_rouge">%</span>);<br />
+                        transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -webkit-filter: brightness(<span class="texte_violet">0.5</span>) opacity(<span class="texte_violet">0.9</span>) saturate(<span class="texte_violet">500</span><span class="texte_rouge">%</span>);<br />
+                        -webkit-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        -moz-filter: brightness(<span class="texte_violet">0.5</span>) opacity(<span class="texte_violet">0.9</span>) saturate(<span class="texte_violet">500</span><span class="texte_rouge">%</span>);<br />
+                        -moz-transition: <span class="texte_bleu">all</span> <span class="texte_violet">0.3</span><span class="texte_rouge">s</span> ease-in-out;<br />
+                        }
+                    </code>
+                </div>
+            </article>
+        </section>
+        
+        <aside id="bonus">
+            <h2>Conclusion</h2>
+                
+            <p>Nous avons vu dans ce tutoriel les différents effets applicables aux images  grâce à la propriété filter de CSS3.</p>
+            <p>Vous pouvez vous amuser en appliquant ces filtres sur d'autres éléments par exemple !</p>
+        </aside>
+        
+        <footer>
+            <small>© Copyright 2016, Tous droits r&eacute;serv&eacute;s Solenn, Denis, Mariyam, Anna</small>
+            <a href="lien.html">Liens utiles</a>
+        </footer>
+    </body>
+</html>

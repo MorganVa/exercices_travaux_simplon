@@ -1,0 +1,46 @@
+
+<html>
+
+  <body>
+
+    <script>
+
+     var chiffre = (Math.floor(Math.random()*9+0));
+
+     console.log (chiffre);
+
+    var chiffreDonne = prompt("Donnez un chiffre entre 0 et 9");
+
+        if (chiffreDonne == chiffre) {
+          alert ("Yes tu as trouve le bon chiffre !!! ");
+         }
+
+         else {
+           alert ("Ce n'est pas le bon chiffre, recommence !");
+              var chiffreDonne = prompt("Donnez un chiffre entre 0 et 9");
+
+                if (chiffreDonne == chiffre) {
+                  alert ("Yes tu as trouve le bon chiffre !!! ");
+                }
+
+                else {
+                  alert ("Ce n'est pas le bon chiffre,tu as perdu");
+                }
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="transformOrigin.css">
+  <title>La propriété transform-orgin</title>
+</head>
+<body>
+
+  <header>
+    Transform-origin
+  </header>
+
+  <p>
+    La fonction CSS transform-origin permet de modifier l'origine du repère.
+  </br>Elle est associée à une transformation (transform).
+  </p>
+
+  <p>
+    La propriété transform-origin se présente de cette manière : <code>transform-origin: x y;</code>
+    <ul>
+      <li> x représente le déplacement horizontal du point d'origine.</li>
+      <li> y représente le déplacement vertical du point d'origine.</li>
+      <li> x et y sont exprimés en %, en unité de longueur(cm, px, ...) ou en mot clé (left, right, top, bottom ou center).</li>
+      <li> La valeur de y peut être omise. Dans ce cas c'est la valeur par défaut qui est utilisée (center).</li>
+    </ul>
+  </p>
+
+  <p>
+    L'origine par défaut est le centre de l'élement (50%,50%).
+    Lorsque l'on applique <code>transform-origin</code>, le décalage du point d'origine s'effectuera à partir du bord en haut à gauche de l'élément.
+  </br>Exemple : <code>transform-origin: 10px;</code> déplacera le point d'origine de 10 px vers la droite <span>à partir du bord gauche</span> par contre, il n'y a pas de valeur de y de spécifiée donc c'est la valeur par défaut qui est appliquée.
+  </p>
+
+  <p>
+    schéma
+  </p>
+
+  <div id="global">
+
+    <div class="demo">
+
+        <div id="texte">transform: rotate(360deg);</div>
+
+
+        <div class="box"></div>
+
+        <button id="button1">click me</button>
+
+    </div>
+
+    <div class="demo">
+
+      <div id="texte">transform-origin: top left; // transform: rotate(360deg);</div>
+
+
+
+      <div class="box2"></div>
+
+      <button id="button2">click me</button>
+
+
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> <!-- jQuery est inclus ! -->
+  <script>
+  $('#button1').click(function () {
+
+    $('.box').toggleClass('box-rotate');
+  });
+
+  $('#button2').click(function () {
+
+    $('.box2').toggleClass('box-rotate');
+  });
+
+
+
+
+  </script>
+
+</body>
+</html>

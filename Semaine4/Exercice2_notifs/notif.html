@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Notifs</title>
+  <style>
+
+
+    .notif.valid {
+      background-color : #33DD66;
+      width:60%;
+      color:#FFF;
+      font-weight : bold;
+      font-family : Helvetica;
+      border-radius:5px;
+      border:2px solid #018001;
+      padding:7px;
+     }
+
+    .notif.valid::before {
+     content: url(http://rxlabz.com/simplon/files/icons/icon_check_white.png);
+     padding-right:10px;
+    }
+
+    .notif.error {      
+      background-color : #DD7701;
+      width:60%;
+      color:#FFF;
+      font-weight : bold;
+      font-family : Helvetica;
+      border-radius:5px;
+      border:2px solid #BB0000;
+      margin:20px 0px;
+      padding:3px 7px 7px 8px;
+
+     }
+
+    .notif.error::before {
+     position:relative;
+     content: url(http://www.rxlabz.com/simplon/files/icons/dialog-warning.png);
+     padding-right:10px;
+     top:4px;
+
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="notif valid">Bienvenue</div>
+	<div class="notif error">Erreur</div>
+
+  <img src="" />
+
+</body>
+</html>

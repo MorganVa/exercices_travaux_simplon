@@ -1,0 +1,86 @@
+#menu {
+    width:auto;
+    height: 35px;
+    font-size: 16px;
+    font-family: Helvetica;
+    background-color: black;
+    border-radius: 8px;
+}
+
+#menu ul {
+    list-style-type: none;  /*Enlever mise en forme des listes */
+    margin: 0;
+    padding: 10px;
+    color:#A1AFAB;
+    font-size: small;
+}
+
+
+#menu li {
+    display: inline;  /* Mettre en blocks alignés */
+    padding: 15px 15px 15px 15px;
+}
+
+#entete {
+  font-family: Helvetica;
+  font-size:x-large;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 70px;
+}
+
+span {
+  font-size:large;
+  color:#A1AFAB;
+}
+
+hr {
+   width: 800px;
+   color:grey;
+   margin-left: 50px;
+}
+
+#image {
+  height: 200px;
+  width: 400px;
+  margin-left: 50px;
+  margin-top: 30px;
+  border : 1px solid #07BF8E;
+}
+
+h1, h2, div p {
+  margin-left: 500px;
+  margin-right: 350px;
+}
+
+h1 {
+ color:#07BF8E;
+ text-decoration: underline;
+ }
+
+h2 {
+  font-style: italic;
+}
+
+div p {
+  font-size: small;
+  padding-bottom: 10px;
+}
+
+#haut {
+  margin-top:-220px;
+}
+
+button {
+  margin-left: 500px;
+  margin-right: 350px;
+  margin-top: -60px;
+  border-color:#07BF8E;
+  background-color: white;
+  font-weight: bold;
+  color:#07BF8E;
+  margin-bottom: 30px;
+  border-style:double;
+  border-width:3px;
+  border-radius:5px;
+}

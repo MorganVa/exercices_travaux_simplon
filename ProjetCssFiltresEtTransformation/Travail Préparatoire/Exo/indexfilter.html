@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div class="edito"></div>
+<h1>CSS FILTER</h1>
+<h3>Edit Filter !</h3>
+<div>
+<textarea name="Text1" cols="40" rows="5" id="colorme" placeholder="/*Tu peux changer le filtre directement en l'écrivant ici !*/"></textarea>
+<p><img src="http://placehold.it/200x100" class="done"></p>
+<p><img src="http://placehold.it/200x100" class="filter">reproduis ça !</p>
+</div>
+<div class="btn">
+<button type="button" onclick="colorhim()">OK</button>
+</div>
+
+<script type="text/javascript">
+
+   	function colorhim() {
+	var clr = document.getElementById('colorme').value;
+	var	clrst = document.createElement('style');
+	clrst.innerText = ".filter {" + clr + "}"; 
+	
+   		document.head.appendChild(clrst);
+   	}
+
+</script>
+
+</body>
+</html>
