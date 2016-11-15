@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax - Chargement de données</title>
+
+    <script type="text/javascript">
+        var requete;
+
+        /* TODO » fonction de chargement et d'affichage du fichier users.csv
+         */
+        function loadCSV() {
+          requete = new XMLHttpRequest();
+          // au chargement on affiche le texte reçu ds la console et sur la page
+          requete.onload = onDataCsv;
+          requete.onerror = onError;
+          requete.open('get', 'users.csv', true);
+          requete.send();
+        }
+        function onDataCsv(e) {
+            console.log('onDataCsv', this.responseText); // this.responseText n'est pas défini
+            var users = parseTextCsv(e.target.responseText);
+            var userList = document.createElement('ul');
+            users.forEach(function (user) {
+                var userLi = document.createElement('li');
+                userLi.innerText = user[0] + ' ' + user[1] + '»' + user[2];
+                userList.appendChild(userLi);
+            });
+            document.getElementById('bloc-csv').appendChild(userList);
+        }
+        function parseTextCsv(text) {
+            var users = text.split('\n');
+            return users.map(function (userText) {
+                return userText.split(',');
+            });
+        }
+
+        function onError(e) {
+            alert("Erreur : ", e);
+        }
+    </script>
+
+</head>
+<body>
+
+<p id="bloc-csv">
+    <button onclick="loadCSV()">chargement texte "csv"</button>
+</p>
+
+</body>
+</html>
