@@ -9,50 +9,46 @@ if ((isset($_POST['pseudo']))&&(isset($_POST['password']))) {
 
     if(strlen($mdp)>3 && strlen($pseudo)>3) {
 
-
-
-
         try {
             // on ouvre une connexion à la base de données
             $connexion = new PDO(
                 'mysql:host=localhost;dbname=loginv4;charset=utf8',
-                'root', 'Inaya13!');
+                'root', 'Root#1234');
         } catch (Exception $excp) {
             die('Erreur : ' . $excp->getMessage());
         };
 
+        $q = $connexion->prepare('SELECT * FROM uilisateurs WHERE pseudo = :login');
+        $q->bindValue(':login', $pseudo, PDO::PARAM_STR);
+        $q->execute();
 
-        $requete = "SELECT * FROM uilisateurs";
-	      $resultats = $connexion->query($requete);
+        if($q->fetchColumn() > 0){
 
-        while( $donnees = $resultats->fetch()){
+            $q = $connexion->prepare('SELECT password FROM uilisateurs WHERE pseudo = :login');
+            $q->bindValue(':login', $pseudo, PDO::PARAM_STR);
+            $q->execute();
+            $resultats = $q->fetch();
 
-          if($donnees['pseudo'] === $pseudo) {
+              if($resultats['password'] === $mdp) {// si le mot de passe est bien celui associé au pseudo dans la base de donnée
 
-            $requeteBis = "SELECT * FROM uilisateurs WHERE pseudo='$pseudo'";
-            $resultatsBis = $connexion->query($requeteBis); //si le pseudo existe
+                 $user = [
+                  "pseudo" => $pseudo,
+                  "password" => $mdp
+                ];
 
-            if($resultatsBis['password'] === $mdp) {// si le mot de passe est bien celui associé au pseudo dans la base de donnée
+                $loginFailed = false;
 
-              $user = [
-                "pseudo" => $pseudo,
-                "password" => $mdp,
-              ];
-              $loginFailed = false;
+              } else {// Si le couple pseudo / mdp n'est pas bon.
 
+               $loginFailed = true;
+               $errorMessage =
+               '<div class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                 <span class="sr-only">Error:</span>
+                 Le mot de passe n\'est pas correct.
+               </div>';
+             }
 
-            }
-            else // Si le couple pseudo / mdp n'est pas bon.
-            {
-              $loginFailed = true;
-              $errorMessage =
-              '<div class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span>
-                Le mot de passe n\'est pas correct.
-              </div>';
-            }
-
-        } else {
+        } else { // si le pseudo n'existe pas
           $loginFailed = true;
           $errorMessage =
           '<div class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -60,10 +56,8 @@ if ((isset($_POST['pseudo']))&&(isset($_POST['password']))) {
             Le pseudo n\'existe pas, voulez vous vous inscrire ?
           </div>';
         }
-    }
-    $resultats->closeCursor();
-  }
-    else {
+
+  }else {
       $loginFailed = true;
       $errorMessage =
       '<div class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -79,16 +73,16 @@ if ((isset($_POST['pseudo']))&&(isset($_POST['password']))) {
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Formulaire inscription</title>
+    <title>Formulaire de connexion</title>
 
   <!--   <link	href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     BOOTSTRAP & JQuery-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
   <link href="css/font-awesome.min.css" rel="stylesheet">  <!-- chargement icones Font Awesome-->
