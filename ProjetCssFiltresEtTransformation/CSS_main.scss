@@ -1,0 +1,118 @@
+
+@mixin filter($filter){
+  -webkit-filter : $filter;
+  -moz-filter : $filter;
+  -ms-filter : $filter;
+  filter : $filter;
+}
+
+$handfont : Just Another Hand , sans-serif;
+$textfont : Francois One , sans-serif ;
+$postitcolor : #F0E886 ;
+$pencilcolor : #252525 ;
+
+#liensUtiles, #backtotop {
+    color : $pencilcolor;
+    text-decoration: none;
+    font-family: $textfont;
+    font-size: 30px;
+    padding-left: 90px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+#liensUtiles:hover, #backtotop:hover {
+  letter-spacing: 10px;
+}
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 30px;
+  width: 100vw;
+  text-align: center;
+  color: $pencilcolor;
+  small{
+    a{
+      text-decoration: none;
+      color: $pencilcolor;
+      -webkit-transition: all .2s ease-in-out ;
+      -moz-transition: all .2s ease-in-out ;
+      -ms-transition: all .2s ease-in-out ;
+    }
+    a:hover{
+      color: #E03333;
+      letter-spacing: 4px;
+    }
+    font-size: 40px;
+    font-family: $handfont ;
+  }
+}
+
+nav {
+  width: 100%;
+  div {
+    font-family: $handfont ;
+    font-size: 3vw;
+    color : $pencilcolor;
+    background-color: skyblue ;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, .5);
+    width: 15vw;
+    height: 80px;
+    margin: 0 16.5vw;
+    text-align: center;
+    line-height: 80px;
+    display: inline-block;
+    letter-spacing: 4px;
+    -webkit-transition: all .3s ease-in-out ;
+    -moz-transition: all .3s ease-in-out ;
+    -ms-transition: all .3s ease-in-out ;
+  }
+  div:hover {
+    width: 20vw;
+    margin: 0 14vw ;
+  }
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image: url("images/bg.png");
+}
+
+
+p , li , ul , h1 {
+  margin-left: 90px;
+}
+
+#mark {
+  background-color: red;
+  opacity: .5;
+  height: 100%;
+  width: 3px;
+  bottom: 0;
+  left: 3vw;
+  top: 0;
+  z-index: -2;
+  position: fixed;
+}
+
+.hiddencontent {
+  overflow: hidden;
+  height: 0 ;
+}
+
+#chapterheader{
+  -webkit-transition: all .3s ease-in-out ;
+  -moz-transition: all .3s ease-in-out ;
+  -ms-transition: all .3s ease-in-out ;
+  color: brown;
+}
+
+#chapterheader:hover {
+  cursor: pointer;
+  color: $pencilcolor;
+  letter-spacing: 10px;
+}
