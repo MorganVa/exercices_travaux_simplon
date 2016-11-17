@@ -1,0 +1,77 @@
+body {
+  font-family: Helvetica;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/****************************************/
+/*header*/
+
+header{
+    background: #686E8B;
+    color: #66002E;
+    padding:20px 0px;
+    height: 70px;
+    font-family: Helvetica;
+    border-bottom: 2px solid #4B0026;
+    text-align: center;
+    margin-bottom : 20px;
+}
+
+header p{
+  font-size: 2em;
+  padding-bottom: : 10px;
+}
+
+/****************************************/
+/*Formulaires  d'ajout*/
+
+
+#login-Form {
+  width: 550px;
+
+}
+
+#ajoutEvent {
+  width: 550px;
+}
+
+.fields {
+  padding:15px;
+}
+
+form {
+    margin: 10px;
+    padding:10px;
+}
+
+.panel-footer {
+  text-align: center;
+}
+
+/****************************************/
+/*Tableau avec evenements*/
+
+tr, td,#enteteTab tr, th {
+  border: none;
+  text-align:center;
+  width:160px;
+}
+
+#titleTab, #enteteTab {
+  text-align: center;
+}
+
+th {
+  padding: 5px;
+  width:160px;
+}
+
+/****************************************/
+/*Alignement des blocs dans la page*/
+
+.formTab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;;
+}
