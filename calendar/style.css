@@ -63,15 +63,19 @@ tr, td,#enteteTab tr, th {
 }
 
 th {
-  padding: 5px;
-  width:160px;
+  padding-bottom: 5px;
 }
 
 /****************************************/
 /*Alignement des blocs dans la page*/
 
 .formTab {
+  margin : 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;;
+  justify-content: space-around;
+}
+
+#formulaire {
+  margin-right:10px;
 }

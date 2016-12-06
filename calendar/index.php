@@ -26,6 +26,7 @@ include ("verif.php");
     include('formulaireRajoutEvent.php');
     ?>
     <!-- On inclut le tableau -->
+    
     <?php
     include('tableau.php');
     ?>
