@@ -1,0 +1,32 @@
+{
+  "Coordonnées" : [
+        {"nom" : "Dupont",
+         "prenom" : "Jeanne",
+         "rue" : "8 rue du chateau",
+	 "code postal": "42840",
+	 "ville": "Montagny",
+         "téléphone" : "0669629615",
+        },
+        {"accepte contact" : false},
+    ],
+
+    "famille" : [
+      {"enfants" : [
+        {"nombre" : 2,
+         "age1" :12,
+         "age2": 2,
+        },
+      ],
+    },
+     {"marié":false,
+      "celibataire": true,
+     },
+   ],
+
+   "assistante maternelle": [
+     {"ancienneté en années" : 2,
+      "type contrat" : "année complète",
+      "heures hebdomadaires" : 16,
+     }
+   ]
+}
