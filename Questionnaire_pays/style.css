@@ -1,0 +1,40 @@
+body {
+  font-family: Helvetica;
+}
+
+.formPays, .formLangues {
+  width : 400px;
+  background-color:grey;
+  text-align:center;
+  border:1px solid black;
+  margin : 20px;
+}
+
+button {
+  margin : 10px;
+}
+
+.formPays input {
+  margin : 10px;
+}
+
+
+tr, td {
+  border: none;
+  text-align:center;
+  width:100px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+table {
+  border: 1px solid black;
+  padding:10px;
+}
+
+.formulaires, .tableaux{
+  display: flex;
+  justify-content: space-around;
